@@ -148,9 +148,19 @@ public class BookDaoImp implements BookDao{
         }
     }
 
+    /**
+     * страшный метод проверки есть ли ещё параметры, нужен для формирования HQL запроса
+     *
+     * отвечает на вопрос надо ли писать "and" или"where"
+     *
+     * @param nameParam - имя параметра в шаблоне. Будут проверены все поля после этого.
+     * @param tamplate - шаблон поиска
+     * @return true - если есть не путой параметр после "nameParam"
+     *         false - если все следующий параметры пустые
+     */
     private boolean nextParamExist(String nameParam, FindBook tamplate){
         if (nameParam.isEmpty()){
-
+            //если хоть один их параметров не пустой вернем true иначе false
             if (!tamplate.getAuthor().isEmpty() || !tamplate.getTitle().isEmpty()
                     || tamplate.getIsbn() > 0 || tamplate.getYearAfter() > 0
                     || tamplate.getYearBefore() > 0 || tamplate.getReadAlready() != 0){

@@ -38,6 +38,18 @@ public class BookController {
         return modelAndView;
     }
 
+
+
+    @RequestMapping(value = "/infoBook/{id}", method = RequestMethod.GET)
+    public ModelAndView infoBook(@PathVariable("id") int id ){
+        Book bookById = this.bookService.getBookById(id);
+        ModelAndView modelAndView = new ModelAndView("infoBookPage");
+        modelAndView.addObject("book", bookById);
+        return modelAndView;
+    }
+
+
+
     @RequestMapping(value = "/findBookView", method = RequestMethod.GET)
     public ModelAndView findBookView(){
         ModelAndView view = new ModelAndView("findBookQueryPage");
@@ -53,13 +65,8 @@ public class BookController {
         return view;
     }
 
-    @RequestMapping(value = "/infoBook/{id}", method = RequestMethod.GET)
-    public ModelAndView infoBook(@PathVariable("id") int id ){
-        Book bookById = this.bookService.getBookById(id);
-        ModelAndView modelAndView = new ModelAndView("infoBookPage");
-        modelAndView.addObject("book", bookById);
-        return modelAndView;
-    }
+
+
 
     @RequestMapping(value = "/editBook/{id}", method = RequestMethod.GET)
     public ModelAndView editBookView(@PathVariable("id") int id ){
@@ -83,6 +90,8 @@ public class BookController {
         return "redirect:/books/list";
     }
 
+
+
     @RequestMapping(value = "/deleteBook/{id}", method = RequestMethod.GET)
     public String deleteBook(@PathVariable("id") int id, @RequestParam(required = false) int page ){
         this.bookService.removeBook(id);
@@ -92,6 +101,9 @@ public class BookController {
         return "redirect:/books/list?page=" + page;
     }
 
+
+
+    //Добавление книги
     @RequestMapping(value = "/addBook", method = RequestMethod.GET)
     public ModelAndView addBookView(){
         ModelAndView view = new ModelAndView("addBookPage");
