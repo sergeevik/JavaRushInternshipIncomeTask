@@ -1,13 +1,10 @@
-package main.sergeevVA.controller;
+package main.java.sergeevVA.controller;
 
-import main.sergeevVA.model.Book;
-import main.sergeevVA.model.FindBook;
-import main.sergeevVA.service.BookService;
+import main.java.sergeevVA.model.Book;
+import main.java.sergeevVA.model.FindBook;
+import main.java.sergeevVA.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.support.PagedListHolder;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;

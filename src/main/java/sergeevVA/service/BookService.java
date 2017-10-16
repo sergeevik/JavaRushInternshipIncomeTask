@@ -1,12 +1,10 @@
-package main.sergeevVA.service;
+package main.java.sergeevVA.service;
 
-import main.sergeevVA.dao.BookDao;
-import main.sergeevVA.dao.BookDaoImp;
-import main.sergeevVA.model.Book;
-import main.sergeevVA.model.FindBook;
+import main.java.sergeevVA.dao.BookDao;
+import main.java.sergeevVA.model.Book;
+import main.java.sergeevVA.model.FindBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

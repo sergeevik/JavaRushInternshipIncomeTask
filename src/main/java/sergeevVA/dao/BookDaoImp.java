@@ -1,7 +1,7 @@
-package main.sergeevVA.dao;
+package main.java.sergeevVA.dao;
 
-import main.sergeevVA.model.Book;
-import main.sergeevVA.model.FindBook;
+import main.java.sergeevVA.model.Book;
+import main.java.sergeevVA.model.FindBook;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;

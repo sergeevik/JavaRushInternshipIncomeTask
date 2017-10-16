@@ -1,4 +1,4 @@
-package main.sergeevVA.model;
+package main.java.sergeevVA.model;
 
 public class FindBook {
     private String author;

@@ -1,4 +1,4 @@
-package main.sergeevVA.model;
+package main.java.sergeevVA.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
