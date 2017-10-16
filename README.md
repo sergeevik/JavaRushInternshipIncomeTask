@@ -1,0 +1,2 @@
+# JavaRushInternshipIncomeTask
+вступительное задание
